@@ -37,6 +37,7 @@
               <input name="user-input" class="form-control text required" placeholder="enter text here"/>
           </div>
           <div class="btn-group">
+		  <!-- https://www.w3schools.com/bootstrap/bootstrap_buttons.asp -->
             <button class="btn btn-danger" type="submit">Enter</button>
           </div>
       </form>
@@ -84,6 +85,7 @@
           dataType: 'json',
           encode: true 
           })
+		  // https://stackoverflow.com/questions/1145208/jquery-how-to-add-li-in-an-existing-ul
           .done(function(response) {
           $('<li>')
             .append($('<div>')
