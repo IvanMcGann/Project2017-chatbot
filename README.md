@@ -1,14 +1,16 @@
 # Project2017 Eliza-Chatbot
 Data Representation and Querying 
-The README should explain who you are, why you created the chatbot, how you created the chatbot, how to download and run the chatbot and any references you have used.
 
+#Information:
 Name: Ivan McGann
 Student Number: G00340138
 Email: g00340138@gmit.ie 
+
 #Introduction:
 My name is Ivan mcGann, I'm a Year 3 student studying Computing in Software Development in GMIT. This is a project in Data Representation and Querying.
 The project implements html, golang, json, Ajax and Bootstrap to create a chatbot that can take in input from the user and reply.  
-
+Really found some aspects difficult as my experience with golang and ajax. I really struggled getting the javascript working on the html file, I chose to not make it a seperate file, and completely ignored css after tryig to style the background a bit more.
+Only studied go for a few months so doing a project presented its challenges despite the problem sheet. 
 
 # Instructions:
 How to download the chatbot:
@@ -25,7 +27,6 @@ How to download the chatbot:
 8. When it runs its served on an address called localhostr:8080
 9. On an online browser go to 127.0.0.1:8080
 10. Here you can enter in text and onscreen you get responses to your input.
-
 
 
 # References:
