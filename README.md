@@ -6,7 +6,8 @@ Name: Ivan McGann
 Student Number: G00340138
 Email: g00340138@gmit.ie 
 #Introduction:
-My name is Ivan mcGann
+My name is Ivan mcGann, I'm a Year 3 student studying Computing in Software Development in GMIT. This is a project in Data Representation and Querying.
+The project implements html, golang, json, Ajax and Bootstrap to create a chatbot that can take in input from the user and reply.  
 
 
 # Instructions:
