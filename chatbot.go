@@ -14,14 +14,17 @@ import (
 	"strconv"
 )
 
-
+//struct for the users input
 type UserInput struct {
-	UserMessage string
+	UserText string
 }
 
+//struct for Eliza output
 type ElizaOutput struct {
 	ElizaMessage string
 }
+
+//Adapted from https://github.com/data-representation/eliza
 
 // ElizaResponse
 func ElizaResponse(input string) string {
@@ -123,13 +126,7 @@ func Reflect(input string) string {
 } // Reflect
 
 
-
-
-
-
-// Replacer is a struct with two elements: a compiled regular expression,
-// as per the regexp package, and an array of strings containing possible
-// replacements for a string matching the regular expression.
+// Replacer is a struct with two elements: a compiled regular expression and an array of strings containing possible replacements matching the regular expression.
 type Replacer struct {
 	original     *regexp.Regexp
 	replacements []string
@@ -183,15 +180,12 @@ func ReadReplacersFromFile(path string) []Replacer {
 }
 
 // Eliza is a data structure representing a chatbot.
-// The fields responses and substitutions are arrays of Replacers.
-// Eliza will attempt matches from start to end of each array.
 type Eliza struct {
 	responses     []Replacer
 	substitutions []Replacer
 }
 
 // ElizaFromFiles reads in text files containing responses and substitutions
-// data and returns an instance of Eliza with these loaded in.
 func ElizaFromFiles(responsePath string, substitutionPath string) Eliza {
 	eliza := Eliza{}
 
@@ -201,8 +195,7 @@ func ElizaFromFiles(responsePath string, substitutionPath string) Eliza {
 	return eliza
 }
 
-// RespondTo takes a string as input and returns a string. The returned string
-// contains the chatbot's response to the input.
+// RespondTo takes a string as input and returns a string. The returned string contains the chatbot's response to the input.
 func (me *Eliza) RespondTo(input string) string {
 	// Look for a possible response.
 	for _, response := range me.responses {
@@ -263,7 +256,7 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
 
 } // defaultHandler
 
-
+//Adapted with assistance from https://github.com/ET-CS/golang-response-examples/blob/master/ajax-json.go
 
 func ajaxHandler(w http.ResponseWriter, r *http.Request) {
 	
@@ -278,7 +271,7 @@ func ajaxHandler(w http.ResponseWriter, r *http.Request) {
 
 	var elizaOutput ElizaOutput
 	
-	elizaOutput.ElizaMessage = eliza.RespondTo(userInput.UserMessage)
+	elizaOutput.ElizaMessage = eliza.RespondTo(userInput.UserText)
 
 	
 	reply, err := json.Marshal(elizaOutput)
@@ -289,6 +282,7 @@ func ajaxHandler(w http.ResponseWriter, r *http.Request) {
 
 } // ajaxHandler
 
+//adapted with assistance from https://golang.org/pkg/net/http/
 func main() {
     http.HandleFunc("/", redirect)
     http.HandleFunc("/index", defaultHandler)
