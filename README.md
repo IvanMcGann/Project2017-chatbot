@@ -24,3 +24,14 @@ How to download the chatbot:
 10. Here you can enter in text and onscreen you get responses to your input.
 
 
+
+# References:
+Many references are in the files themselves.
+Mainly I used sources and code from:
+https://www.stackoverflow.com
+https://getbootstrap.com
+https://www.smallsurething.com/
+https://www.w3schools.com/bootstrap/
+https://github.com/data-representation/eliza
+https://github.com/IvanMcGann/Go-Lab-Problems
+https://github.com/ET-CS/golang-response-examples/blob/master/ajax-json.go
