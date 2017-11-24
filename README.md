@@ -2,9 +2,11 @@
 Data Representation and Querying 
 The README should explain who you are, why you created the chatbot, how you created the chatbot, how to download and run the chatbot and any references you have used.
 
+Name: Ivan McGann
+Student Number: G00340138
+Email: g00340138@gmit.ie 
 #Introduction:
-
-
+My name is Ivan mcGann
 
 
 # Instructions:
@@ -35,3 +37,4 @@ https://www.w3schools.com/bootstrap/
 https://github.com/data-representation/eliza
 https://github.com/IvanMcGann/Go-Lab-Problems
 https://github.com/ET-CS/golang-response-examples/blob/master/ajax-json.go
+https://golang.org
